@@ -1,0 +1,149 @@
+*
+{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	display:flex;
+	align-items:center;
+	text-align: center;
+	flex-direction: column;
+}
+#header
+{
+	background-image: url(../image/bg.png);
+	background-size: cover;
+	width:100%;
+	height:95vh;
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+	padding:0px 120px;
+	flex-direction: column;
+
+}
+@font-face{
+	font-family:"nav";
+	src:url(../fonts/20051.ttf);
+}
+.logo{
+	width:200px;
+	height:80px;
+	background-image: url(../image/LOGO.png);
+	background-size: cover;
+	background-color: rgba(255,255,255,.4);
+	border-radius:0px 0px 50px 50px;
+	padding-bottom:50px;
+}
+.top__header{
+	display:flex;
+	justify-content: space-between;
+	align-items:flex-start;
+	width:100%;
+}
+.navigation{
+	display: flex;
+	justify-content: flex-end;
+	align-items:center;
+	width:100%;
+	font-family:nav;
+}
+.nav__li{
+	padding:10px 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size:1.5em;
+	position: relative;
+	overflow: hidden;
+	transition: left,color .2s ease-out; 
+	z-index: 1;
+	cursor: pointer;
+	color:#000;
+}
+.nav__li:before{
+	content:'';
+	position: absolute;
+	width:100%;
+	height:30px;
+	background-color: #000;
+	left:-100%;
+	transition: all .3s ease-out; 
+	z-index: -1;
+}
+
+.nav__li:hover{
+
+	color:#fff;
+}
+
+.nav__li:hover:before{
+	left:0;
+	overflow: visible;
+	cursor:pointer;
+}
+/*=============*/
+.header__content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width:100%;
+	height:70%;
+}
+.header__left__side{
+	width:50%;
+	height: 400px;
+	background-color: rgba(255,255,255,.8);
+	margin-bottom:100px;
+	border-radius: 20px 10px 50% 20px;
+	text-align:left;
+	padding:20px;
+
+}
+.header__left__side h1 {
+	font-family:nav;
+	letter-spacing: 2px;
+	position:relative;
+
+}
+.header__left__side h1:before{
+	content:'';
+	width:200px;
+	height: 5px;
+	background-color: black;
+	border-radius: 0px 70% 0px 0px;
+	position: absolute;
+	bottom:-50%;
+}
+
+.header__left__side p{
+	padding:40px 0px 5px;
+	font-size:22px;
+	margin-bottom:50px;
+}
+.button{
+	width:100px;
+	height:30px;
+	border:3px solid rgba(0,255,255,0.2);
+	color:#000;
+	background-color: rgba(0,255,255,0.2);
+	padding:10px 30px;
+	font-family:nav;
+	transition: background-color .2s ease-in-out;	
+	transition: border .2s ease-in-out;	
+}
+.button:hover{
+	border:3px solid black;
+	background-color: rgba(0,0,0,0);
+}
+
+
+
